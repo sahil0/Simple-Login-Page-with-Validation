@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <script type="text/javascript">
+    
+        function check(){
+    var u = document.forms["Lform"]["Uname"].value;
+    var p1=document.forms["Lform"]["password1"].value;
+    var p2=document.forms["Lform"]["password2"].value;
+    var M=document.forms["Lform"]["Mobilno"].value;
+        
+   if(u =="" || p1 =="" || p2 =="" || M =="")
+                {
+                     window.alert("all field required");
+        name.focus();
+        return false;
+        }
+ var u = document.forms["Lform"]["Uname"].value;
+    if(!isNaN(u))
+{
+alert("Please Enter Only at name field Characters");
+return false;
+}
+        
+  var M=document.forms["Lform"]["Mobilno"].value;
+    if(M.length < 10 || M.length > 10 )
+        
+{
+alert("Please Enter 10 digit MobilNumbers");
+return false;
+}  
+            if(p1 != p2 )
+                {
+                    alert("Password does not match");
+return false;
+                    
+                }
+            if(p1.length<6 )
+                {
+                    alert()
+                }
+    return true;
+}
+    </script>
+    <link rel="stylesheet" type="text/css" href="stylr.css">
+        
+
+<body>
+    <div class="loginbox">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form name="Lform" action="#" onsubmit="return check()" class="bg-light" >
+            <label>Username</label>
+            <input type="text" id="Name" name="Uname" placeholder="Enter Username" autocomplete="off">
+            <label>Password</label>
+            <input type="password" id="Password" name="password1" placeholder="Enter Password" >
+                        <label>Confirm Password</label>
+            <input type="password" id="Cpassword" name="password2" placeholder="Enter Password" >
+            
+                   <label>Mobil NO:</label>
+            <input type="number" id="number" name="Mobilno" placeholder="Enter Password" required>
+            
+                        <label>Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter gmail">
+            <input type="submit" name="submit" value="submit">
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+        
+
+    </div>
+
+</body>
+</head>
+</html>
